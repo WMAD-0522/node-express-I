@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "12c2df7b-f69e-4d64-9824-b98a8c4528b1",
+		"name": "Node102",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4765475"
+	},
+	"item": [
+		{
+			"name": "health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5001/health",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_coctails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5001/coctails/",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"coctails",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_coctail",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"recipeName\": \"Margarita\",\n    \"Category\": \"Ordinary Drink\",\n    \"Instructions\": \"Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5001/coctails/add-coctail",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"coctails",
+						"add-coctail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "coctail_categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5001/coctails/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"coctails",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
